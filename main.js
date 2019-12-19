@@ -12,29 +12,28 @@ btn.addEventListener("click", function(get) {
       document.getElementById("totalTime").innerHTML = data.recipes[0].readyInMinutes;
       document.getElementById("totalMinutes").innerHTML = "Total Time: " + data.recipes[0].readyInMinutes + " minutes";
       document.getElementById("sourceURL").innerHTML = data.recipes[0].sourceUrl;
-
-
-
+      document.getElementById("instructions").innerHTML = data.recipes[0].instructions;
       var unorderedList = document.getElementById('ingredients');
       var myElement;
-      for (var i = 0; i < data.recipes[0].extendedIngredients[i].originalString.length; i++) {
-        myElement = document.createElement("li");
-        unorderedList.appendChild(myElement);
+      for (var i = 0; i < data.recipes[0].extendedIngredients[i].originalString.length + data.recipes[0].analyzedInstructions[0].steps[i].step.length; i++) {
+        myElement = document.createElement("p");
         document.getElementById("ingredients").innerHTML += data.recipes[0].extendedIngredients[i].original;
+        unorderedList.appendChild(myElement);
       }
       
+      
+      
+        
+
+
+      //    const arr = ['cat', 'dog', 'fish'];
+      //    arr.forEach(element => {
+      //      console.log(element);
+      //    });
 
 
 
 
-
-
-
-
-
-      //        for (var test = 0; test < data.recipes[0].analyzedInstructions[0].steps[test].step.length; test++) {
-      //        document.getElementById("instructions").innerHTML += data.recipes[0].analyzedInstructions[0].steps[test].step;
-      //          }
 
 
 

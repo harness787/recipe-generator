@@ -1,29 +1,4 @@
-html {
-    background: url(../images/bg.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    height: 300vh;
-    z-index: -1000;
-}
-
-
-@media(max-width: 650px) {
-    html {
-        background-position: right 10%;
-    }
-}
-
-@media(min-width: 2310px) {
-    html {
-        background-position: center top 35%;
-    }
-}
-
-#instructions {
-    margin: 10px;
-    padding: 10px;
+.firstpage {
+    padding-top: 50vh;
+    width: 100%;
 }
